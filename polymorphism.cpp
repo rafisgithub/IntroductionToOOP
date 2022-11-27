@@ -9,19 +9,41 @@
 //function overloading
 #include <iostream>
 using namespace std;
-
-int plusFunc(int x, int y) {
-  return x + y;
-}
-
-double plusFunc(double x, double y) {
-  return x + y;
-}
-
+class MathematicalOp{
+	private:
+		int n1,n2,n4;
+		double n3;
+	public:
+		void calculate(int x,int y){
+			n1=x;
+			n2=y;
+			int sum=0;
+			sum=n1+n2;
+			cout<<"Sum:"<<sum<<endl;
+		}
+		void calculate(int x, int y ,double z){
+			n1=x;
+			n2=y;
+			n3=z;
+			double multiplication;
+			multiplication=n1*n2*n3;
+			cout<<"multiplication:"<<multiplication<<endl;
+		}
+		void calculate(int x,int y,double z,int d){
+			n1=x;
+			n2=d;
+			int subtraction;
+			subtraction=n1-d;
+			cout<<"subtraction:"<<subtraction;
+		}
+};
 int main() {
-  int myNum1 = plusFunc(8, 5);
-  double myNum2 = plusFunc(4.3, 6.26);
-  cout << "Int: " << myNum1 << "\n";
-  cout << "Double: " << myNum2;
-  return 0;
+  MathematicalOp obj;
+  int n1,n2,n4;
+  double n3;
+  cout<<"Enter four numbers:\n";
+  cin>>n1>>n2>>n3>>n4;
+  obj.calculate(n1,n2);
+  obj.calculate(n1,n2,n3);
+  obj.calculate(n1,n2,n3,n4);
 }                
