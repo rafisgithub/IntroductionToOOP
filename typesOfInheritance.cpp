@@ -22,7 +22,7 @@ class Shape{
 		int heigth;
 };
 class Rectangle:public Shape{
-	public:
+	private:
 		void getArea(){
 			cout<<"Rectangle area:"<<length*width<<endl;
 		}
