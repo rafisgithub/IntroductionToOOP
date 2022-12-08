@@ -55,7 +55,6 @@ int main(){
 	Student object;
 	object.get_StudentIno();
 	object.display();
-	
 	return 0;
 }
 
