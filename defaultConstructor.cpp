@@ -6,10 +6,15 @@
 using namespace std;
 class Student{
 	public:
+			~Student(){
+		cout<<"Im from destructor.\n";
+	}
 		Student(){
-		cout<<"30"<<endl;
+			cout<<"I'm from constructor.\n";
+		cout<<"150"<<endl;
 		cout<<"Rafi Ahmed"<<endl;	
 		}
+
 };
 int main(){
 	Student obj;
